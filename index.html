@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0F3D2A">
+<title>Parichayam Restaurant | Authentic Hyderabadi Cuisine & Garden Dining</title>
+<meta name="description" content="Hyderabadi biryani, starters, milkshakes, free delivery and garden dining in Angallu near MITS College.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--green:#0F3D2A;--green2:#165c3f;--gold:#E8B04B;--cream:#FFF8EC;--ink:#1d1d1b;--red:#c8372d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.15}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.btn{display:inline-block;padding:12px 26px;border-radius:999px;font-weight:600;font-size:15px;border:2px solid var(--gold);cursor:pointer;font-family:inherit;transition:.2s}
+.btn.gold{background:var(--gold);color:var(--green)}.btn.gold:hover{background:#f5c566}
+.btn.out{color:#fff;background:transparent}.btn.out:hover{background:rgba(255,255,255,.12)}
+.btn.green{background:var(--green);color:#fff;border-color:var(--green)}.btn.green:hover{background:var(--green2)}
+.label{color:var(--gold);letter-spacing:.2em;font-size:13px;font-weight:600;text-transform:uppercase;margin-bottom:10px}
+/* header */
+header{position:sticky;top:0;z-index:50;background:var(--green);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.25)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
+.brand{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;line-height:1}
+.brand small{display:block;font-family:Poppins;font-size:9px;letter-spacing:.25em;color:var(--gold);margin-top:3px;font-weight:500}
+nav{display:flex;gap:26px;font-size:14px;font-weight:500}
+nav a:hover{color:var(--gold)}
+.cartlink{background:var(--gold);color:var(--green);padding:8px 16px;border-radius:999px;font-weight:600;font-size:14px;cursor:pointer;border:0;font-family:inherit}
+.burger{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+/* hero */
+.hero{background:linear-gradient(135deg,var(--green) 0%,#0a2a1d 100%);color:#fff;padding:70px 0 90px}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center}
+.tag{color:var(--gold);letter-spacing:.18em;font-size:13px;font-weight:600}
+.hero h1{font-size:64px;margin:14px 0 18px}
+.hero h1 span{color:var(--gold);display:block}
+.hero p.i{opacity:.9;max-width:520px;margin-bottom:26px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
+.badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
+.badge{background:rgba(255,255,255,.1);border:1px solid rgba(232,176,75,.4);border-radius:12px;padding:10px 16px;font-size:13px}
+.badge b{color:var(--gold);display:block;font-size:15px}
+.heroimg{position:relative}
+.heroimg img{border-radius:28px;box-shadow:0 25px 60px rgba(0,0,0,.45);aspect-ratio:1/1;object-fit:cover;width:100%}
+.cap{position:absolute;background:#fff;color:var(--green);border-radius:14px;padding:10px 16px;box-shadow:0 8px 24px rgba(0,0,0,.3);font-size:12px}
+.cap b{display:block;font-size:15px;font-family:'Playfair Display',serif}
+.cap.a{left:-24px;bottom:50px}.cap.b{right:-14px;top:30px}
+/* sections */
+section{padding:80px 0}
+.center{text-align:center}
+.sec-h{font-size:42px;color:var(--green);margin-bottom:12px}
+.sub{max-width:640px;margin:0 auto 40px;color:#555}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
+.card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 6px 22px rgba(15,61,42,.1);display:flex;flex-direction:column;transition:.25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(15,61,42,.18)}
+.card .im{position:relative;aspect-ratio:4/3;background:#e8e0cf}
+.card .im img{width:100%;height:100%;object-fit:cover}
+.pill{position:absolute;top:12px;left:12px;font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;background:#fff}
+.pill.v{color:#1a8a3a}.pill.n{color:var(--red)}
+.pop{position:absolute;top:12px;right:12px;background:var(--gold);color:var(--green);font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px}
+.card .bd{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
+.card h3{font-size:19px;color:var(--green);margin-bottom:4px}
+.price{font-weight:700;font-size:20px;color:var(--red)}
+.gift{font-size:12.5px;background:#fff3d6;border-radius:8px;padding:6px 10px;margin:10px 0;color:#7a5400}
+.card .act{margin-top:auto;display:flex;gap:8px}
+.card .act .btn{padding:9px 14px;font-size:13px;flex:1;text-align:center}
+.combo{background:#fff}
+.fire{color:var(--red);font-weight:600;letter-spacing:.1em;font-size:13px;margin-bottom:8px}
+/* about */
+.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about .pic{position:relative}
+.about .pic img{border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.2);aspect-ratio:4/3;object-fit:cover;width:100%}
+.about .cap{left:20px;bottom:-20px}
+.about p{margin-bottom:14px;color:#444}
+.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
+.feat{background:#fff;border-radius:14px;padding:14px;text-align:center;font-size:13px;font-weight:600;color:var(--green);box-shadow:0 4px 14px rgba(0,0,0,.06)}
+.feat i{font-style:normal;font-size:24px;display:block}
+/* menu */
+.menu{background:#fff}
+.filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:12px}
+.filters button{padding:8px 18px;border-radius:999px;border:1.5px solid var(--green);background:#fff;color:var(--green);font-family:inherit;font-weight:500;font-size:13.5px;cursor:pointer}
+.filters button.on{background:var(--green);color:#fff}
+.count{text-align:center;margin-bottom:26px;font-size:14px;color:#666}
+/* feature banners */
+.band{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
+.band img{border-radius:24px;aspect-ratio:16/11;object-fit:cover;width:100%;box-shadow:0 16px 40px rgba(0,0,0,.18)}
+.band ul{list-style:none;margin:16px 0 24px}
+.band li{padding:6px 0;font-weight:500}.band li:before{content:"✔ ";color:var(--gold)}
+.dark{background:var(--green);color:#fff}
+.dark h3{color:#fff}
+.band h3{font-size:36px;margin-bottom:10px}
+/* reviews */
+.review{max-width:680px;margin:0 auto;background:#fff;padding:34px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center}
+.stars{color:var(--gold);font-size:24px;letter-spacing:4px}
+.review p{font-size:18px;margin:14px 0;font-style:italic}
+.review b{color:var(--green)}
+/* location */
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px;text-align:left}
+.loc iframe{width:100%;height:100%;min-height:360px;border:0;border-radius:20px}
+.info{background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.07)}
+.info p{margin-bottom:12px}.info b{color:var(--green)}
+/* footer */
+footer{background:#0a2a1d;color:#d8e4dc;padding:60px 0 24px;font-size:14px}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.2fr;gap:36px}
+footer h4{color:var(--gold);margin-bottom:12px;font-family:'Playfair Display',serif;font-size:18px}
+footer li{list-style:none;margin-bottom:7px}footer a:hover{color:var(--gold)}
+.nl{display:flex;margin-top:10px}
+.nl input{flex:1;padding:10px 14px;border-radius:999px 0 0 999px;border:0;font-family:inherit;min-width:0}
+.nl button{background:var(--gold);border:0;border-radius:0 999px 999px 0;padding:0 18px;font-weight:700;cursor:pointer}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px}
+/* cart drawer */
+.drawer{position:fixed;top:0;right:-420px;width:400px;max-width:100%;height:100%;background:#fff;z-index:100;box-shadow:-10px 0 40px rgba(0,0,0,.3);transition:.3s;display:flex;flex-direction:column}
+.drawer.open{right:0}
+.drawer .hd{background:var(--green);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;font-family:'Playfair Display';font-size:22px}
+.drawer .hd button{background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
+.drawer .items{flex:1;overflow:auto;padding:16px 22px}
+.ci{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eee;font-size:14px}
+.ci img{width:54px;height:54px;border-radius:10px;object-fit:cover}
+.ci .n{flex:1}.ci .q button{width:26px;height:26px;border-radius:50%;border:1px solid #ccc;background:#fff;cursor:pointer}
+.drawer .ft{padding:18px 22px;border-top:1px solid #eee}
+.drawer .tot{display:flex;justify-content:space-between;font-weight:700;font-size:18px;margin-bottom:12px}
+.drawer input{width:100%;padding:10px;border:1px solid #ccc;border-radius:10px;margin-bottom:8px;font-family:inherit}
+.empty{text-align:center;color:#888;margin-top:40px}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--green);color:#fff;padding:12px 22px;border-radius:999px;z-index:200;transition:.3s;opacity:0}
+.toast.show{transform:translateX(-50%);opacity:1}
+@media(max-width:900px){
+ nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--green);flex-direction:column;padding:18px 24px;gap:14px}
+ nav.open{display:flex}.burger{display:block}
+ .hero .wrap,.about .wrap,.band,.loc{grid-template-columns:1fr}
+ .hero h1{font-size:46px}.sec-h{font-size:32px}
+ footer .cols{grid-template-columns:1fr 1fr}
+ .cap.a{left:8px}.cap.b{right:8px}
+}
+@media(max-width:560px){footer .cols{grid-template-columns:1fr}.feats{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header>
+ <div class="wrap">
+  <a href="#home" class="brand">Parichayam<small>RESTAURANT &amp; GARDEN</small></a>
+  <nav id="nav">
+   <a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#about">About</a>
+   <a href="#booking">Reservation</a><a href="#reviews">Reviews</a><a href="#location">Location</a>
+  </nav>
+  <div style="display:flex;gap:10px;align-items:center">
+   <button class="cartlink" onclick="toggleCart(true)">🛒 Cart (<span id="cc">0</span>)</button>
+   <button class="burger" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
+  </div>
+ </div>
+</header>
+
+<section class="hero" id="home" style="padding-top:70px">
+ <div class="wrap">
+  <div>
+   <div class="tag">GOOD FOOD • GOOD MOOD • AUTHENTIC DUM BIRYANI</div>
+   <h1>Parichayam<span>Restaurant</span></h1>
+   <p class="i">A blend of tradition, taste and togetherness. Savour authentic Hyderabadi flavours in the heart of Angallu.</p>
+   <div class="btns">
+    <button class="btn gold" onclick="toggleCart(true)">🛒 Cart</button>
+    <a class="btn out" href="#booking">Book a Party</a>
+   </div>
+   <div class="badges">
+    <div class="badge"><b>Free delivery</b>within 3 km of Angallu</div>
+    <div class="badge"><b>4.9/5 Rating</b>1,200+ Foodies</div>
+   </div>
+   <a class="btn out" href="tel:9014498145">📞 9014498145</a>
+  </div>
+  <div class="heroimg">
+   <img src="images/biryani-hero-plate-clean.jpg" alt="Dum biryani plate">
+   <div class="cap a"><b>Born to Biryani</b>Dum cooked to perfection</div>
+   <div class="cap b"><b>Special Combos</b>Free Drink / Shake / Ice Cream</div>
+  </div>
+ </div>
+</section>
+
+<section class="combo center">
+ <div class="wrap">
+  <div class="fire">🔥 TODAY'S SPECIAL COMBO OFFERS</div>
+  <h2 class="sec-h">Complimentary Gifts with Every Combo</h2>
+  <p class="sub">Every dish comes with a free chilled drink, scoops of ice cream or a milkshake, exactly as on our restaurant poster.</p>
+  <div class="grid" id="combos"></div>
+ </div>
+</section>
+
+<section class="about" id="about">
+ <div class="wrap">
+  <div class="pic">
+   <img src="images/restaurant-spread.png" alt="Restaurant spread">
+   <div class="cap"><b>Authentic Hyderabadi</b>Since Inception</div>
+  </div>
+  <div>
+   <div class="label">About Us</div>
+   <h2 class="sec-h">The Taste of Parichayam</h2>
+   <p>Our biryani is cooked dum-style with aged basmati rice and hand-ground spices, sealed and slow-cooked so every grain carries the aroma of Hyderabad.</p>
+   <p>Dine in our open garden with family and friends, or have it delivered straight to your hostel.</p>
+   <div class="feats">
+    <div class="feat"><i>📜</i>Authentic Recipes</div>
+    <div class="feat"><i>🌾</i>Premium Ingredients</div>
+    <div class="feat"><i>❤️</i>Made with Love</div>
+   </div>
+   <a class="btn green" href="#about">Know Our Full Story</a>
+  </div>
+ </div>
+</section>
+
+<section class="menu center" id="menu">
+ <div class="wrap">
+  <div class="label" style="color:var(--red)">Our Complete Menu</div>
+  <h2 class="sec-h">Explore Our Popular Dishes</h2>
+  <p class="sub">Prices follow our official menu. Cart orders are confirmed over WhatsApp.</p>
+  <div class="filters" id="filters"></div>
+  <div class="count" id="count"></div>
+  <div class="grid" id="menugrid"></div>
+ </div>
+</section>
+
+<section id="booking">
+ <div class="wrap band">
+  <img src="images/restaurant-spread.png" alt="Garden dining">
+  <div>
+   <div class="label" style="color:var(--red)">Book a Party &amp; Celebration</div>
+   <h3 style="color:var(--green)">Book a Party or Reserve a Table</h3>
+   <p>Enjoy breezy garden dining with family, friends and college groups.</p>
+   <ul><li>Private Party Hall up to 50 guests</li><li>College &amp; Family Outdoor Catering Available</li></ul>
+   <a class="btn green" href="https://wa.me/919014498145?text=Hi%2C%20I%20want%20to%20book%20a%20party%20%2F%20table" target="_blank">Book a Party →</a>
+  </div>
+ </div>
+</section>
+
+<section class="dark" id="order">
+ <div class="wrap band">
+  <div>
+   <h3>Crave It? Order It!</h3>
+   <ul><li>Free delivery within 3 km</li><li>Fast doorstep WhatsApp delivery</li></ul>
+   <button class="btn gold" onclick="toggleCart(true)">Order &amp; Checkout →</button>
+  </div>
+  <img src="images/biryani-hero-plate-clean.jpg" alt="Biryani delivery">
+ </div>
+</section>
+
+<section class="center" id="reviews">
+ <div class="wrap">
+  <h2 class="sec-h">Words from Our Guests</h2>
+  <div class="review">
+   <div class="stars">★★★★★</div>
+   <p>The biryani is absolutely amazing — rich flavour, perfectly cooked and great value for students!</p>
+   <b>Sai Teja</b> <span style="color:#777">· MITS Student</span>
+  </div>
+ </div>
+</section>
+
+<section class="center" id="location" style="padding-top:0">
+ <div class="wrap">
+  <h2 class="sec-h">Come Find Us in Angallu</h2>
+  <div class="loc">
+   <iframe src="https://maps.google.com/maps?q=13.6318002,78.4823367&z=16&output=embed" loading="lazy" title="Map"></iframe>
+   <div class="info">
+    <p><b>📍 Address</b><br>Angallu, Near MITS College, Madanapalle, Andhra Pradesh</p>
+    <p><b>📞 Phone</b><br>9014498145 · 9347209229</p>
+    <p><b>👤 Proprietor</b><br>Macha Kiran Kumar Naidu</p>
+    <p><b>🕚 Hours</b><br>Monday–Sunday, 11:00 AM – 11:00 PM (Lunch &amp; Dinner)<br><span style="color:#1a8a3a">Open Today for Lunch &amp; Dinner</span></p>
+    <p>College &amp; Family Outdoor Catering · Private Party Hall up to 50 guests</p>
+    <a class="btn green" target="_blank" href="https://www.google.com/maps?q=13.6318002,78.4823367">Open in Google Maps</a>
+   </div>
+  </div>
+ </div>
+</section>
+
+<footer>
+ <div class="wrap">
+  <div class="cols">
+   <div><div class="brand" style="color:#fff">Parichayam<small>RESTAURANT &amp; GARDEN</small></div>
+    <p style="margin-top:12px">Good Food • Great Taste • Warm Hospitality. Authentic Hyderabadi dum biryani and garden dining in Angallu.</p></div>
+   <div><h4>Quick Links</h4><ul>
+    <li><a href="#home">Home</a></li><li><a href="#menu">Our Menu List</a></li><li><a href="#about">About Us</a></li>
+    <li><a href="#booking">Reserve a Table</a></li><li><a href="#reviews">Guest Reviews</a></li>
+    <li><a href="#" onclick="toggleCart(true);return false">Your Cart &amp; Order</a></li><li><a href="#location">Find Location</a></li></ul></div>
+   <div><h4>Contact</h4><p>Angallu, Near MITS College, Madanapalle, AP</p><p>9014498145 · 9347209229</p><p>Mon–Sun, 11 AM – 11 PM</p>
+    <p>Free delivery to hostels, PGs and the MITS campus.</p></div>
+   <div><h4>Newsletter</h4><p>Subscribe for weekly secret menu combos and discounts.</p>
+    <form class="nl" onsubmit="event.preventDefault();toast('Thanks for subscribing!');this.reset()"><input type="email" required placeholder="Your email"><button>→</button></form></div>
+  </div>
+  <div class="copy"><span>© 2026 Parichayam Restaurant. All rights reserved.</span><span>Taste Tradition. Feel at Home.</span></div>
+ </div>
+</footer>
+
+<div class="drawer" id="drawer">
+ <div class="hd">Your Cart <button onclick="toggleCart(false)">×</button></div>
+ <div class="items" id="items"></div>
+ <div class="ft">
+  <div class="tot"><span>Total</span><span id="total">₹0</span></div>
+  <input id="cname" placeholder="Your name"><input id="caddr" placeholder="Delivery address / hostel">
+  <button class="btn green" style="width:100%" onclick="checkout()">Order via WhatsApp</button>
+ </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const IMG="images/menu/";
+// [id,name,price,category,group,gift,popular]
+const M=[
+["chicken-dum-biryani","Chicken Dum Biryani",129,"n","nvb","Free 250ml Coke + Water Bottle",1],
+["chicken-fry-piece-biryani","Chicken Fry Piece Biryani",149,"n","nvb","Free 250ml Coke + 1 Water Bottle",1],
+["boneless-biryani","Boneless Biryani",189,"n","nvb","Free 1 Scoop Ice Cream + Water Bottle"],
+["lollipop-biryani","Lollipop Biryani",169,"n","nvb","Free 1 Scoop Ice Cream + Water Bottle"],
+["mughalai-biryani","Mughalai Biryani",199,"n","nvb","Free 250ml Coke + Water Bottle + Ice Cream",1],
+["biryani-rice-plate","Biryani Rice Plate",89,"n","nvb","Free 250ml Coke"],
+["chicken-65-biryani","Chicken 65 Biryani",179,"n","nvb",""],
+["mushroom-biryani","Mushroom Biryani",129,"v","vb","Free Blackcurrant Milkshake"],
+["paneer-biryani","Paneer Biryani",149,"v","vb","Free Chocolate Milkshake",1],
+["veg-dum-biryani","Veg Dum Biryani",109,"v","vb","Served with salan & raita"],
+["veg-biryani-rice","Veg Biryani Rice",79,"v","vb","Free 250ml Coke"],
+["chilli-chicken","Chilli Chicken",199,"n","st",""],
+["chicken-lollipop","Chicken Lollipop",199,"n","st",""],
+["dragon-chicken","Dragon Chicken",229,"n","st","Free 2 Scoops Ice Cream + 500ml Water"],
+["pepper-chicken","Pepper Chicken",229,"n","st",""],
+["lemon-chicken","Lemon Chicken",239,"n","st","Free Vanilla Milkshake"],
+["chocolate-milkshake","Chocolate Milkshake",70,"v","rm",""],
+["vanilla-milkshake","Vanilla Milkshake",70,"v","rm",""],
+["strawberry-milkshake","Strawberry Milkshake",70,"v","rm",""],
+["blackcurrant-milkshake","Blackcurrant Milkshake",70,"v","rm",""],
+["oreo-blast-milkshake","Oreo Blast Milkshake",70,"v","rm",""],
+["kitkat-milkshake","KitKat Milkshake",70,"v","rm",""],
+["bournville-chocolate-milkshake","Bournville Chocolate Milkshake",70,"v","rm",""],
+["butterscotch-milkshake","Butterscotch Milkshake",70,"v","rm",""],
+["double-milkshake","Double Milk Shake",90,"v","dm",""],
+["choco-vanilla","Choco Vanilla",90,"v","dm",""],
+["oreo-with-digestive","Oreo with Digestive",90,"v","dm",""],
+["pista-with-vanilla","Pista with Vanilla",90,"v","dm",""],
+["blackcurrant-with-vanilla","Blackcurrant with Vanilla",90,"v","dm",""],
+["strawberry-with-vanilla","Strawberry with Vanilla",90,"v","dm",""],
+["oreo-with-ice-cream","Oreo with Ice Cream",90,"v","dm",""]
+];
+const COMBO=["chicken-dum-biryani","chicken-fry-piece-biryani","boneless-biryani","lollipop-biryani","mughalai-biryani","paneer-biryani","mushroom-biryani","dragon-chicken"];
+const F=[["all","All Items"],["v","Pure Veg"],["n","Non-Veg"],["nvb","All Non-Veg Biryani"],["vb","Veg Biryani"],["st","Non-Veg Starters"],["rm","Regular Milkshakes"],["dm","Double Milkshakes"]];
+const byId=Object.fromEntries(M.map(m=>[m[0],m]));
+let cart=JSON.parse(localStorage.getItem("pcart")||"{}"),filter="all";
+const card=m=>`<div class="card"><div class="im"><img loading="lazy" src="${IMG+m[0]}.jpg" alt="${m[1]}">
+<span class="pill ${m[3]}">${m[3]=="v"?"● Veg":"● Non-Veg"}</span>${m[6]?'<span class="pop">Popular</span>':''}</div>
+<div class="bd"><h3>${m[1]}</h3><div class="price">₹${m[2]}</div>${m[5]?`<div class="gift">🎁 ${m[5]}</div>`:'<div style="height:10px"></div>'}
+<div class="act"><button class="btn gold" onclick="add('${m[0]}')">Add to Cart</button><button class="btn green" onclick="add('${m[0]}');toggleCart(true)">Order Now</button></div></div></div>`;
+function renderMenu(){
+ const list=M.filter(m=>filter=="all"||m[3]==filter||m[4]==filter);
+ menugrid.innerHTML=list.map(card).join("");
+ count.innerHTML=`Showing <b>${list.length}</b> items`;
+ filters.innerHTML=F.map(f=>`<button class="${f[0]==filter?'on':''}" onclick="filter='${f[0]}';renderMenu()">${f[1]}</button>`).join("");
+}
+combos.innerHTML=COMBO.map(id=>card(byId[id])).join("");
+function save(){localStorage.setItem("pcart",JSON.stringify(cart));renderCart()}
+function add(id){cart[id]=(cart[id]||0)+1;save();toast(byId[id][1]+" added to cart")}
+function chg(id,d){cart[id]+=d;if(cart[id]<=0)delete cart[id];save()}
+function renderCart(){
+ const ids=Object.keys(cart);let t=0,n=0;
+ items.innerHTML=ids.length?ids.map(id=>{const m=byId[id],q=cart[id];t+=m[2]*q;n+=q;
+  return `<div class="ci"><img src="${IMG+id}.jpg" alt=""><div class="n"><b>${m[1]}</b><br>₹${m[2]}</div>
+  <div class="q"><button onclick="chg('${id}',-1)">−</button> ${q} <button onclick="chg('${id}',1)">+</button></div></div>`}).join(""):'<p class="empty">Your cart is empty</p>';
+ total.textContent="₹"+t;cc.textContent=n;
+}
+function toggleCart(o){drawer.classList.toggle("open",o)}
+function checkout(){
+ const ids=Object.keys(cart);if(!ids.length)return toast("Your cart is empty");
+ let t=0,msg="Hello Parichayam! I'd like to order:\n";
+ ids.forEach(id=>{const m=byId[id];t+=m[2]*cart[id];msg+=`• ${m[1]} x${cart[id]} = ₹${m[2]*cart[id]}\n`});
+ msg+=`Total: ₹${t}\nName: ${cname.value}\nAddress: ${caddr.value}`;
+ window.open("https://wa.me/919014498145?text="+encodeURIComponent(msg),"_blank");
+}
+function toast(s){const e=document.getElementById("toast");e.textContent=s;e.classList.add("show");clearTimeout(e._t);e._t=setTimeout(()=>e.classList.remove("show"),1800)}
+renderMenu();renderCart();
+</script>
+</body>
+</html>
