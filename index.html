@@ -7,113 +7,140 @@
 <title>Parichayam Restaurant | Authentic Hyderabadi Cuisine & Garden Dining</title>
 <meta name="description" content="Hyderabadi biryani, starters, milkshakes, free delivery and garden dining in Angallu near MITS College.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Caveat:wght@700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--green:#0F3D2A;--green2:#165c3f;--gold:#E8B04B;--cream:#FFF8EC;--ink:#1d1d1b;--red:#c8372d}
+:root{--forest:#0f3d2a;--forest-dark:#082117;--forest-soft:#17583b;--gold:#c9a84c;--gold-light:#f0d58c;--gold-dark:#9e7d2e;--cream:#fbf6e9;--parchment:#f2e8ce;--ink:#17241c;--muted:#5b6b60;--line:rgba(15,61,42,.12);--veg:#16a34a;--nonveg:#dc2626;
+--head:'Cinzel','Playfair Display',Georgia,serif;--body:'Poppins','Inter',-apple-system,'Segoe UI',Roboto,sans-serif;--script:'Caveat',cursive}
 *{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:Poppins,sans-serif;color:var(--ink);background:var(--cream);line-height:1.6}
+html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%}
+body{font-family:var(--body);color:var(--ink);background:var(--cream);line-height:1.65;overflow-x:hidden}
 img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:'Playfair Display',serif;line-height:1.15}
-.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
-.btn{display:inline-block;padding:12px 26px;border-radius:999px;font-weight:600;font-size:15px;border:2px solid var(--gold);cursor:pointer;font-family:inherit;transition:.2s}
-.btn.gold{background:var(--gold);color:var(--green)}.btn.gold:hover{background:#f5c566}
-.btn.out{color:#fff;background:transparent}.btn.out:hover{background:rgba(255,255,255,.12)}
-.btn.green{background:var(--green);color:#fff;border-color:var(--green)}.btn.green:hover{background:var(--green2)}
-.label{color:var(--gold);letter-spacing:.2em;font-size:13px;font-weight:600;text-transform:uppercase;margin-bottom:10px}
+h1,h2,h3,h4{font-family:var(--head);line-height:1.15}
+.wrap{width:100%;max-width:1240px;margin:0 auto;padding:0 24px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 28px;border-radius:999px;font-weight:700;font-size:15px;border:0;cursor:pointer;font-family:inherit;transition:transform .2s,box-shadow .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.gold{background:linear-gradient(135deg,var(--gold) 0%,var(--gold-light) 100%);color:var(--forest-dark);box-shadow:0 6px 20px rgba(201,168,76,.35)}
+.btn.gold:hover{box-shadow:0 10px 26px rgba(201,168,76,.5)}
+.btn.out{color:#fff;background:rgba(255,255,255,.05);border:1.5px solid rgba(240,213,140,.45)}.btn.out:hover{background:rgba(255,255,255,.12)}
+.btn.green{background:var(--forest);color:#fff}.btn.green:hover{background:var(--forest-soft)}
+.label{color:var(--gold-dark);letter-spacing:.22em;font-size:12.5px;font-weight:700;text-transform:uppercase;margin-bottom:12px}
 /* header */
-header{position:sticky;top:0;z-index:50;background:var(--green);color:#fff;box-shadow:0 2px 12px rgba(0,0,0,.25)}
-header .wrap{display:flex;align-items:center;justify-content:space-between;height:70px;gap:16px}
-.brand{font-family:'Playfair Display',serif;font-size:24px;font-weight:700;line-height:1}
-.brand small{display:block;font-family:Poppins;font-size:9px;letter-spacing:.25em;color:var(--gold);margin-top:3px;font-weight:500}
-nav{display:flex;gap:26px;font-size:14px;font-weight:500}
-nav a:hover{color:var(--gold)}
-.cartlink{background:var(--gold);color:var(--green);padding:8px 16px;border-radius:999px;font-weight:600;font-size:14px;cursor:pointer;border:0;font-family:inherit}
+header{position:sticky;top:0;z-index:50;background:var(--forest);color:#fff;box-shadow:0 4px 20px rgba(0,0,0,.35);border-bottom:1px solid rgba(201,168,76,.25)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:16px}
+.brand{display:flex;align-items:center;gap:12px;font-family:var(--head);font-size:21px;font-weight:700;line-height:1;letter-spacing:.04em}
+.brand .logo{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--gold);display:grid;place-items:center;color:var(--gold);flex:none}
+.brand small{display:block;font-family:var(--body);font-size:9px;letter-spacing:.22em;color:var(--gold);margin-top:5px;font-weight:700}
+nav{display:flex;gap:30px;font-size:14px;font-weight:500}
+nav a{opacity:.92;transition:color .2s}nav a:hover{color:var(--gold-light)}
+.cartlink{background:linear-gradient(135deg,var(--gold),var(--gold-light));color:var(--forest-dark);padding:10px 20px;border-radius:999px;font-weight:700;font-size:14px;cursor:pointer;border:0;font-family:inherit;box-shadow:0 4px 14px rgba(201,168,76,.35)}
 .burger{display:none;background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
 /* hero */
-.hero{background:linear-gradient(135deg,var(--green) 0%,#0a2a1d 100%);color:#fff;padding:70px 0 90px}
-.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:50px;align-items:center}
-.tag{color:var(--gold);letter-spacing:.18em;font-size:13px;font-weight:600}
-.hero h1{font-size:64px;margin:14px 0 18px}
-.hero h1 span{color:var(--gold);display:block}
-.hero p.i{opacity:.9;max-width:520px;margin-bottom:26px}
-.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:26px}
-.badges{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:22px}
-.badge{background:rgba(255,255,255,.1);border:1px solid rgba(232,176,75,.4);border-radius:12px;padding:10px 16px;font-size:13px}
-.badge b{color:var(--gold);display:block;font-size:15px}
+.hero{background:radial-gradient(circle at 75% 30%,#154530 0%,var(--forest) 50%,var(--forest-dark) 100%);color:#fff;padding:84px 0 96px}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:56px;align-items:center}
+.tag{display:inline-block;color:var(--gold-light);letter-spacing:.14em;font-size:11.5px;font-weight:700;padding:8px 16px;border-radius:999px;background:rgba(201,168,76,.12);border:1px solid rgba(201,168,76,.4)}
+.hero h1{font-size:clamp(46px,7vw,88px);font-weight:900;letter-spacing:-.02em;margin:22px 0 18px;text-transform:uppercase}
+.hero h1 span{display:block;font-family:var(--script);font-weight:700;font-size:.9em;text-transform:none;letter-spacing:0;color:var(--gold);line-height:1}
+.hero p.i{color:rgba(255,255,255,.85);max-width:540px;margin-bottom:30px;font-size:16.8px}
+.hero .btns{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:30px}
+.trust{display:flex;flex-wrap:wrap;gap:12px 26px;border-top:1px solid rgba(255,255,255,.14);padding-top:22px;font-size:13.5px;color:rgba(255,255,255,.85)}
+.trust span,.trust a{display:inline-flex;align-items:center;gap:8px}
+.trust a:hover{color:var(--gold-light)}
 .heroimg{position:relative}
-.heroimg img{border-radius:28px;box-shadow:0 25px 60px rgba(0,0,0,.45);aspect-ratio:1/1;object-fit:cover;width:100%}
-.cap{position:absolute;background:#fff;color:var(--green);border-radius:14px;padding:10px 16px;box-shadow:0 8px 24px rgba(0,0,0,.3);font-size:12px}
-.cap b{display:block;font-size:15px;font-family:'Playfair Display',serif}
-.cap.a{left:-24px;bottom:50px}.cap.b{right:-14px;top:30px}
+.heroimg img{border-radius:26px;border:1.5px solid rgba(240,213,140,.55);box-shadow:0 30px 70px rgba(0,0,0,.5);aspect-ratio:1/1;object-fit:cover;width:100%}
+.cap{position:absolute;background:rgba(8,33,23,.94);color:rgba(255,255,255,.8);border:1px solid var(--gold);border-radius:14px;padding:11px 18px;box-shadow:0 10px 28px rgba(0,0,0,.4);font-size:12px}
+.cap b{display:block;font-size:14px;font-family:var(--body);font-weight:700;color:#fff}
+.cap.a{left:-26px;bottom:44px}.cap.b{right:-16px;top:26px}
 /* sections */
-section{padding:80px 0}
+section{padding:88px 0}
 .center{text-align:center}
-.sec-h{font-size:42px;color:var(--green);margin-bottom:12px}
-.sub{max-width:640px;margin:0 auto 40px;color:#555}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:24px}
-.card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 6px 22px rgba(15,61,42,.1);display:flex;flex-direction:column;transition:.25s}
-.card:hover{transform:translateY(-5px);box-shadow:0 14px 34px rgba(15,61,42,.18)}
-.card .im{position:relative;aspect-ratio:4/3;background:#e8e0cf}
-.card .im img{width:100%;height:100%;object-fit:cover}
-.pill{position:absolute;top:12px;left:12px;font-size:11px;font-weight:600;padding:3px 10px;border-radius:999px;background:#fff}
-.pill.v{color:#1a8a3a}.pill.n{color:var(--red)}
-.pop{position:absolute;top:12px;right:12px;background:var(--gold);color:var(--green);font-size:11px;font-weight:700;padding:3px 10px;border-radius:999px}
-.card .bd{padding:16px 18px 18px;display:flex;flex-direction:column;flex:1}
-.card h3{font-size:19px;color:var(--green);margin-bottom:4px}
-.price{font-weight:700;font-size:20px;color:var(--red)}
-.gift{font-size:12.5px;background:#fff3d6;border-radius:8px;padding:6px 10px;margin:10px 0;color:#7a5400}
+.sec-h{font-size:clamp(28px,4vw,40px);color:var(--forest);margin-bottom:14px;font-weight:700}
+.sub{max-width:640px;margin:0 auto 42px;color:var(--muted)}
+/* combos carousel */
+.combo{background:radial-gradient(circle at 50% 30%,#134e36 0%,#0b2b1e 60%,#071c13 100%);color:#fff;padding:60px 0 64px;border-bottom:1px solid rgba(201,168,76,.4)}
+.combo .head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;text-align:left;margin-bottom:30px}
+.combo .head>div{max-width:720px}
+.combo .fire{color:var(--gold-light);font-weight:700;letter-spacing:.2em;font-size:12.5px;margin-bottom:10px}
+.combo .sec-h{color:#fff;margin-bottom:10px}
+.combo .sub{margin:0;color:rgba(255,255,255,.78);max-width:640px}
+.arrows{display:flex;gap:12px;flex:none}
+.arrows button{width:46px;height:46px;border-radius:50%;border:1.5px solid var(--gold);background:rgba(255,255,255,.04);color:var(--gold-light);font-size:20px;cursor:pointer;transition:.2s}
+.arrows button:hover{background:var(--gold);color:var(--forest-dark)}
+.carousel{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 18px;scrollbar-width:thin;scrollbar-color:var(--gold) transparent;text-align:left}
+.carousel .card{flex:0 0 316px;scroll-snap-align:start}
+/* cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:24px;text-align:left}
+.card{background:#fff;border-radius:22px;padding:16px;box-shadow:0 8px 26px rgba(15,61,42,.1);display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s}
+.card:hover{transform:translateY(-5px);box-shadow:0 16px 38px rgba(15,61,42,.2)}
+.card .top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:12px;font-size:12px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#374151}
+.card .kind{display:inline-flex;align-items:center;gap:8px}
+.dot{width:16px;height:16px;border:1.5px solid;border-radius:3px;display:grid;place-items:center;flex:none}
+.dot:after{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
+.dot.v{color:var(--veg)}.dot.n{color:var(--nonveg)}
+.pop{background:#fdf3d6;color:var(--gold-dark);font-size:11.5px;font-weight:700;padding:3px 11px;border-radius:999px;text-transform:none;letter-spacing:0}
+.card .im{position:relative;aspect-ratio:4/3;border-radius:14px;overflow:hidden;background:#e8e0cf}
+.card .im img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover .im img{transform:scale(1.05)}
+.price{position:absolute;right:10px;bottom:10px;background:var(--forest);color:var(--gold-light);font-weight:700;font-size:16px;padding:6px 16px;border-radius:999px;border:1px solid rgba(201,168,76,.5)}
+.card .bd{display:flex;flex-direction:column;flex:1;padding-top:14px}
+.card h3{font-size:17.5px;color:var(--forest);margin-bottom:12px;text-transform:uppercase;font-weight:700;letter-spacing:.01em;min-height:2.3em;margin-bottom:16px}
+.gift{font-size:12.5px;border:1.5px dashed var(--gold);background:#fffaf0;border-radius:10px;padding:9px 12px;margin-bottom:14px;color:var(--gold-dark);min-height:44px}
+.gift b{color:#7a5a14}
+.gift.none{border-color:transparent;background:none;padding:0}
 .card .act{margin-top:auto;display:flex;gap:8px}
-.card .act .btn{padding:9px 14px;font-size:13px;flex:1;text-align:center}
-.combo{background:#fff}
-.fire{color:var(--red);font-weight:600;letter-spacing:.1em;font-size:13px;margin-bottom:8px}
+.card .act .btn{padding:11px 10px;font-size:13px;flex:1}
 /* about */
-.about .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.about{background:var(--cream)}
+.about .wrap{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:64px;align-items:center}
 .about .pic{position:relative}
-.about .pic img{border-radius:24px;box-shadow:0 20px 50px rgba(0,0,0,.2);aspect-ratio:4/3;object-fit:cover;width:100%}
-.about .cap{left:20px;bottom:-20px}
-.about p{margin-bottom:14px;color:#444}
-.feats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:24px 0}
-.feat{background:#fff;border-radius:14px;padding:14px;text-align:center;font-size:13px;font-weight:600;color:var(--green);box-shadow:0 4px 14px rgba(0,0,0,.06)}
-.feat i{font-style:normal;font-size:24px;display:block}
+.about .pic img{border-radius:26px;box-shadow:0 24px 56px rgba(15,61,42,.25);aspect-ratio:4/3;object-fit:cover;width:100%}
+.about .cap{left:22px;bottom:-22px}
+.about p{margin-bottom:14px;color:var(--muted)}
+.feats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:26px 0}
+.feat{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 10px;text-align:center;font-size:13px;font-weight:600;color:var(--forest);box-shadow:0 4px 14px rgba(15,61,42,.06)}
+.feat i{font-style:normal;font-size:26px;display:block;margin-bottom:4px}
 /* menu */
-.menu{background:#fff}
-.filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:12px}
-.filters button{padding:8px 18px;border-radius:999px;border:1.5px solid var(--green);background:#fff;color:var(--green);font-family:inherit;font-weight:500;font-size:13.5px;cursor:pointer}
-.filters button.on{background:var(--green);color:#fff}
-.count{text-align:center;margin-bottom:26px;font-size:14px;color:#666}
+.menu{background:var(--parchment)}
+.filters{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-bottom:14px}
+.filters button{padding:9px 20px;border-radius:999px;border:1.5px solid rgba(15,61,42,.25);background:rgba(255,255,255,.6);color:var(--forest);font-family:inherit;font-weight:600;font-size:13.5px;cursor:pointer;transition:.2s}
+.filters button:hover{border-color:var(--forest)}
+.filters button.on{background:var(--forest);color:var(--gold-light);border-color:var(--forest)}
+.count{text-align:center;margin-bottom:28px;font-size:14px;color:var(--muted)}
 /* feature banners */
-.band{display:grid;grid-template-columns:1.1fr 1fr;gap:50px;align-items:center}
-.band img{border-radius:24px;aspect-ratio:16/11;object-fit:cover;width:100%;box-shadow:0 16px 40px rgba(0,0,0,.18)}
-.band ul{list-style:none;margin:16px 0 24px}
-.band li{padding:6px 0;font-weight:500}.band li:before{content:"✔ ";color:var(--gold)}
-.dark{background:var(--green);color:#fff}
+.band{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:56px;align-items:center}
+.band img{border-radius:26px;aspect-ratio:16/11;object-fit:cover;width:100%;box-shadow:0 20px 46px rgba(0,0,0,.2)}
+.band ul{list-style:none;margin:16px 0 26px}
+.band li{padding:6px 0;font-weight:500}.band li:before{content:"✦ ";color:var(--gold)}
+.dark{background:radial-gradient(circle at 25% 40%,#154530 0%,var(--forest) 55%,var(--forest-dark) 100%);color:#fff}
 .dark h3{color:#fff}
-.band h3{font-size:36px;margin-bottom:10px}
+.band h3{font-size:clamp(26px,3.4vw,36px);margin-bottom:12px}
+#booking{background:var(--cream)}
 /* reviews */
-.review{max-width:680px;margin:0 auto;background:#fff;padding:34px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.08);text-align:center}
-.stars{color:var(--gold);font-size:24px;letter-spacing:4px}
-.review p{font-size:18px;margin:14px 0;font-style:italic}
-.review b{color:var(--green)}
+#reviews{background:var(--parchment)}
+.review{max-width:700px;margin:0 auto;background:#fff;padding:38px;border-radius:26px;border:1px solid var(--line);box-shadow:0 14px 36px rgba(15,61,42,.1);text-align:center}
+.stars{color:var(--gold);font-size:26px;letter-spacing:5px}
+.review p{font-size:18px;margin:14px 0;font-style:italic;color:var(--ink)}
+.review b{color:var(--forest)}
 /* location */
-.loc{display:grid;grid-template-columns:1fr 1fr;gap:30px;margin-top:30px;text-align:left}
-.loc iframe{width:100%;height:100%;min-height:360px;border:0;border-radius:20px}
-.info{background:#fff;border-radius:20px;padding:28px;box-shadow:0 8px 24px rgba(0,0,0,.07)}
-.info p{margin-bottom:12px}.info b{color:var(--green)}
+#location{background:var(--cream);padding-top:88px}
+.loc{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:30px;margin-top:34px;text-align:left}
+.loc iframe{width:100%;height:100%;min-height:380px;border:0;border-radius:24px;box-shadow:0 14px 36px rgba(15,61,42,.15)}
+.info{background:#fff;border:1px solid var(--line);border-radius:24px;padding:32px;box-shadow:0 14px 36px rgba(15,61,42,.1)}
+.info p{margin-bottom:14px;color:var(--muted)}.info b{color:var(--forest)}
 /* footer */
-footer{background:#0a2a1d;color:#d8e4dc;padding:60px 0 24px;font-size:14px}
-footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.2fr;gap:36px}
-footer h4{color:var(--gold);margin-bottom:12px;font-family:'Playfair Display',serif;font-size:18px}
-footer li{list-style:none;margin-bottom:7px}footer a:hover{color:var(--gold)}
-.nl{display:flex;margin-top:10px}
-.nl input{flex:1;padding:10px 14px;border-radius:999px 0 0 999px;border:0;font-family:inherit;min-width:0}
-.nl button{background:var(--gold);border:0;border-radius:0 999px 999px 0;padding:0 18px;font-weight:700;cursor:pointer}
-.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px}
+footer{background:var(--forest-dark);color:rgba(255,255,255,.85);padding:68px 0 26px;font-size:14px;border-top:1px solid rgba(201,168,76,.3)}
+footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1.2fr;gap:40px}
+footer h4{color:var(--gold);margin-bottom:14px;font-size:16px;letter-spacing:.06em;text-transform:uppercase}
+footer li{list-style:none;margin-bottom:8px}footer a:hover{color:var(--gold-light)}
+footer p{margin-bottom:6px}
+.nl{display:flex;margin-top:12px}
+.nl input{flex:1;padding:11px 16px;border-radius:999px 0 0 999px;border:0;font-family:inherit;min-width:0}
+.nl button{background:linear-gradient(135deg,var(--gold),var(--gold-light));border:0;border-radius:0 999px 999px 0;padding:0 20px;font-weight:700;cursor:pointer}
+.copy{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:13px;color:rgba(255,255,255,.65)}
 /* cart drawer */
 .drawer{position:fixed;top:0;right:-420px;width:400px;max-width:100%;height:100%;background:#fff;z-index:100;box-shadow:-10px 0 40px rgba(0,0,0,.3);transition:.3s;display:flex;flex-direction:column}
 .drawer.open{right:0}
-.drawer .hd{background:var(--green);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;font-family:'Playfair Display';font-size:22px}
+.drawer .hd{background:var(--forest);color:#fff;padding:18px 22px;display:flex;justify-content:space-between;align-items:center;font-family:var(--head);font-size:20px;border-bottom:2px solid var(--gold)}
 .drawer .hd button{background:none;border:0;color:#fff;font-size:26px;cursor:pointer}
 .drawer .items{flex:1;overflow:auto;padding:16px 22px}
 .ci{display:flex;gap:12px;align-items:center;padding:10px 0;border-bottom:1px solid #eee;font-size:14px}
@@ -123,24 +150,28 @@ footer li{list-style:none;margin-bottom:7px}footer a:hover{color:var(--gold)}
 .drawer .tot{display:flex;justify-content:space-between;font-weight:700;font-size:18px;margin-bottom:12px}
 .drawer input{width:100%;padding:10px;border:1px solid #ccc;border-radius:10px;margin-bottom:8px;font-family:inherit}
 .empty{text-align:center;color:#888;margin-top:40px}
-.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--green);color:#fff;padding:12px 22px;border-radius:999px;z-index:200;transition:.3s;opacity:0}
+.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(80px);background:var(--forest);color:var(--gold-light);border:1px solid var(--gold);padding:12px 22px;border-radius:999px;z-index:200;transition:.3s;opacity:0}
 .toast.show{transform:translateX(-50%);opacity:1}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 @media(max-width:900px){
- nav{display:none;position:absolute;top:70px;left:0;right:0;background:var(--green);flex-direction:column;padding:18px 24px;gap:14px}
+ nav{display:none;position:absolute;top:72px;left:0;right:0;background:var(--forest);flex-direction:column;padding:18px 24px;gap:14px;border-bottom:1px solid rgba(201,168,76,.3)}
  nav.open{display:flex}.burger{display:block}
- .hero .wrap,.about .wrap,.band,.loc{grid-template-columns:1fr}
- .hero h1{font-size:46px}.sec-h{font-size:32px}
+ .hero .wrap,.about .wrap,.band,.loc{grid-template-columns:minmax(0,1fr)}
+ section{padding:64px 0}.hero{padding:56px 0 72px}
  footer .cols{grid-template-columns:1fr 1fr}
  .cap.a{left:8px}.cap.b{right:8px}
+ .combo .head{flex-direction:column;align-items:flex-start}
+ .arrows{display:none}
+ .carousel .card{flex-basis:78%}
 }
-@media(max-width:560px){footer .cols{grid-template-columns:1fr}.feats{grid-template-columns:1fr}}
+@media(max-width:560px){footer .cols{grid-template-columns:1fr}.feats{grid-template-columns:1fr}.wrap{padding:0 18px}.brand{font-size:17px}.cartlink{padding:9px 14px}}
 </style>
 </head>
 <body>
 
 <header>
  <div class="wrap">
-  <a href="#home" class="brand">Parichayam<small>RESTAURANT &amp; GARDEN</small></a>
+  <a href="#home" class="brand"><span class="logo"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V8"/><path d="M12 8C12 4 9 2.500 5 3c0 4 2 6 7 5z"/><path d="M12 12c0-3.500 3-5 7-4.500 0 4-2.500 6-7 4.500z"/></svg></span><span>PARICHAYAM<small>RESTAURANT &amp; GARDEN</small></span></a>
   <nav id="nav">
    <a href="#home">Home</a><a href="#menu">Our Menu</a><a href="#about">About</a>
    <a href="#booking">Reservation</a><a href="#reviews">Reviews</a><a href="#location">Location</a>
@@ -157,31 +188,32 @@ footer li{list-style:none;margin-bottom:7px}footer a:hover{color:var(--gold)}
   <div>
    <div class="tag">GOOD FOOD • GOOD MOOD • AUTHENTIC DUM BIRYANI</div>
    <h1>Parichayam<span>Restaurant</span></h1>
-   <p class="i">A blend of tradition, taste and togetherness. Savour authentic Hyderabadi flavours in the heart of Angallu.</p>
+   <p class="i">A perfect blend of tradition, taste and togetherness. Experience authentic Hyderabadi flavours, generous portions, and heartfelt hospitality in Angallu.</p>
    <div class="btns">
     <button class="btn gold" onclick="toggleCart(true)">🛒 Cart</button>
     <a class="btn out" href="#booking">Book a Party</a>
    </div>
-   <div class="badges">
-    <div class="badge"><b>Free delivery</b>within 3 km of Angallu</div>
-    <div class="badge"><b>4.9/5 Rating</b>1,200+ Foodies</div>
-   </div>
-   <a class="btn out" href="tel:9014498145">📞 9014498145</a>
+   <div class="trust"><span>🛵 Free delivery within 3 km of Angallu</span><span>⭐ 4.9/5 Rating (1,200+ Foodies)</span><a href="tel:9014498145">📞 Call 9014498145</a></div>
   </div>
   <div class="heroimg">
    <img src="images/biryani-hero-plate-clean.jpg" alt="Dum biryani plate">
    <div class="cap a"><b>Born to Biryani</b>Dum cooked to perfection</div>
-   <div class="cap b"><b>Special Combos</b>Free Drink / Shake / Ice Cream</div>
+   <div class="cap b"><b>Garden Dining</b>Family &amp; friends welcome</div>
   </div>
  </div>
 </section>
 
-<section class="combo center">
+<section class="combo">
  <div class="wrap">
-  <div class="fire">🔥 TODAY'S SPECIAL COMBO OFFERS</div>
-  <h2 class="sec-h">Complimentary Gifts with Every Combo</h2>
-  <p class="sub">Every dish comes with a free chilled drink, scoops of ice cream or a milkshake, exactly as on our restaurant poster.</p>
-  <div class="grid" id="combos"></div>
+  <div class="head">
+   <div>
+    <div class="fire">🔥 CHEF'S FAVOURITES</div>
+    <h2 class="sec-h">Our Most Loved Biryanis</h2>
+    <p class="sub">Browse our most-loved dishes sideways, cooked fresh and served hot.</p>
+   </div>
+   <div class="arrows"><button aria-label="Previous" onclick="slide(-1)">‹</button><button aria-label="Next" onclick="slide(1)">›</button></div>
+  </div>
+  <div class="carousel" id="combos"></div>
  </div>
 </section>
 
@@ -208,7 +240,7 @@ footer li{list-style:none;margin-bottom:7px}footer a:hover{color:var(--gold)}
 
 <section class="menu center" id="menu">
  <div class="wrap">
-  <div class="label" style="color:var(--red)">Our Complete Menu</div>
+  <div class="label">Our Complete Menu</div>
   <h2 class="sec-h">Explore Our Popular Dishes</h2>
   <p class="sub">Prices follow our official menu. Cart orders are confirmed over WhatsApp.</p>
   <div class="filters" id="filters"></div>
@@ -221,8 +253,8 @@ footer li{list-style:none;margin-bottom:7px}footer a:hover{color:var(--gold)}
  <div class="wrap band">
   <img src="images/restaurant-spread.png" alt="Garden dining">
   <div>
-   <div class="label" style="color:var(--red)">Book a Party &amp; Celebration</div>
-   <h3 style="color:var(--green)">Book a Party or Reserve a Table</h3>
+   <div class="label">Book a Party &amp; Celebration</div>
+   <h3 style="color:var(--forest)">Book a Party or Reserve a Table</h3>
    <p>Enjoy breezy garden dining with family, friends and college groups.</p>
    <ul><li>Private Party Hall up to 50 guests</li><li>College &amp; Family Outdoor Catering Available</li></ul>
    <a class="btn green" href="https://wa.me/919014498145?text=Hi%2C%20I%20want%20to%20book%20a%20party%20%2F%20table" target="_blank">Book a Party →</a>
@@ -338,17 +370,19 @@ const COMBO=["chicken-dum-biryani","chicken-fry-piece-biryani","boneless-biryani
 const F=[["all","All Items"],["v","Pure Veg"],["n","Non-Veg"],["nvb","All Non-Veg Biryani"],["vb","Veg Biryani"],["st","Non-Veg Starters"],["rm","Regular Milkshakes"],["dm","Double Milkshakes"]];
 const byId=Object.fromEntries(M.map(m=>[m[0],m]));
 let cart=JSON.parse(localStorage.getItem("pcart")||"{}"),filter="all";
-const card=m=>`<div class="card"><div class="im"><img loading="lazy" src="${IMG+m[0]}.jpg" alt="${m[1]}">
-<span class="pill ${m[3]}">${m[3]=="v"?"● Veg":"● Non-Veg"}</span>${m[6]?'<span class="pop">Popular</span>':''}</div>
-<div class="bd"><h3>${m[1]}</h3><div class="price">₹${m[2]}</div>${m[5]?`<div class="gift">🎁 ${m[5]}</div>`:'<div style="height:10px"></div>'}
-<div class="act"><button class="btn gold" onclick="add('${m[0]}')">Add to Cart</button><button class="btn green" onclick="add('${m[0]}');toggleCart(true)">Order Now</button></div></div></div>`;
+const GL={nvb:"Non-Veg Biryani",vb:"Veg Biryani",st:"Non-Veg Starter",rm:"Milkshake",dm:"Double Milkshake"};
+const card=(m,cta)=>`<div class="card"><div class="top"><span class="kind"><span class="dot ${m[3]}"></span>${GL[m[4]]||(m[3]=="v"?"Veg":"Non-Veg")}</span>${m[6]?'<span class="pop">🔥 Popular</span>':''}</div>
+<div class="im"><img loading="lazy" src="${IMG+m[0]}.jpg" alt="${m[1]}"><span class="price">₹${m[2]}</span></div>
+<div class="bd"><h3>${m[1]}</h3>
+<div class="act"><button class="btn green" onclick="add('${m[0]}')">🛍 Add to Cart</button><button class="btn gold" onclick="add('${m[0]}');toggleCart(true)">${cta||"Order Now →"}</button></div></div></div>`;
 function renderMenu(){
  const list=M.filter(m=>filter=="all"||m[3]==filter||m[4]==filter);
- menugrid.innerHTML=list.map(card).join("");
+ menugrid.innerHTML=list.map(m=>card(m)).join("");
  count.innerHTML=`Showing <b>${list.length}</b> items`;
  filters.innerHTML=F.map(f=>`<button class="${f[0]==filter?'on':''}" onclick="filter='${f[0]}';renderMenu()">${f[1]}</button>`).join("");
 }
-combos.innerHTML=COMBO.map(id=>card(byId[id])).join("");
+combos.innerHTML=COMBO.map(id=>card(byId[id],"Cart →")).join("");
+function slide(d){combos.scrollBy({left:d*338,behavior:"smooth"})}
 function save(){localStorage.setItem("pcart",JSON.stringify(cart));renderCart()}
 function add(id){cart[id]=(cart[id]||0)+1;save();toast(byId[id][1]+" added to cart")}
 function chg(id,d){cart[id]+=d;if(cart[id]<=0)delete cart[id];save()}
